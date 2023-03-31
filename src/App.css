@@ -1,0 +1,15 @@
+
+
+.App {
+  text-align: center;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.page-wrapper {
+  padding: 50px 60px;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
