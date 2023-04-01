@@ -8,17 +8,6 @@ import { FaNodeJs } from "react-icons/fa";
 import { TbBrandCSharp } from "react-icons/tb";
 import { SiDotnet } from "react-icons/si";
 
-const style = {
-  height: "100%",
-
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  background: `url("/assets/technical-heart.svg")  100% 0%   no-repeat`,
-  // backgroundSize: "contain",
-  backgroundSize: " auto 50%",
-};
-
 const AboutPage = () => {
   return (
     <React.Fragment>
@@ -26,25 +15,47 @@ const AboutPage = () => {
         item
         xs={12}
         sx={{
-          margin: 0,
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          padding: "0",
+          overflowY: "auto",
+          overflowX: "hidden",
         }}
       >
-        <div style={style}>
+        <Box
+          sx={{
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            background: `url("/assets/technical-heart.svg")  100% 0%   no-repeat`,
+            backgroundSize: " auto 50%",
+
+            // overflowY: "auto",
+            // overflowX: "hidden",
+          }}
+        >
           <Box
             sx={{
               background:
                 "linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 15%, rgba(255,255,255,1), rgba(255,255,255,0.7) 85%, rgba(255,255,255,0)) 100%",
               pt: 3,
               pb: 3,
+              overflowY: "auto",
+              overflowX: "hidden",
             }}
           >
-            <Typography variant="h2" component="h3" gutterBottom>
+            <Typography
+              sx={{ typography: { sm: "h2", xs: "h3" } }}
+              component="h3"
+              gutterBottom
+            >
               Paulina Okulska
             </Typography>
-            <Typography sx={{ typography: { sm: 'h3', xs: 'h5' } }} >Aspiring software developer.</Typography>
+            <Typography sx={{ typography: { sm: "h3", xs: "h5" } }}>
+              Aspiring software developer.
+            </Typography>
           </Box>
           <Box
             sx={{
@@ -52,28 +63,33 @@ const AboutPage = () => {
                 "linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 15%, rgba(255,255,255,1), rgba(255,255,255,0.7) 85%, rgba(255,255,255,0)) 100%",
               pt: 3,
               pb: 3,
+              overflow: "hidden",
             }}
           >
             <Stack
               justifyContent="center"
               alignContent="center"
               alignItems="center"
+              sx={{ overflowY: "auto", overflowX: "hidden" }}
             >
               <Box
                 sx={{
-                  width: { xs: "90%", md: "60%" },
-                  mb:2
+                  width: { xs: "85%", md: "60%" },
+                  mb: 2,
+                  p: 0,
+                  overflowY: "auto",
+                  overflowX: "hidden",
                 }}
               >
-                <Typography variant="p" >
+                <Typography variant="p">
                   Exploring secrets of React, Node and C#. Currently excited
                   about .NET. I am eager to join an ambitious team as a junior
                   developer where I could use my skills in coding and
                   troubleshooting in order to contribute to interesting
                   projects.
                 </Typography>
-                <Typography variant="p" >
-                  Approaching challenges with enthusiasm and curiosity. My
+                <Typography variant="p">
+                  I'm Approaching challenges with enthusiasm and curiosity. My
                   strong communication and language skills, attenion to graphic
                   design, efficient learning, attention to detail and
                   solution-oriented attitude would make me a valuable asset to
@@ -92,13 +108,13 @@ const AboutPage = () => {
               }}
             >
               <SiReact />
-              <SiJavascript />
+              {/* <SiJavascript /> */}
               <FaNodeJs />
               <TbBrandCSharp />
               <SiDotnet />
             </Stack>
           </Box>
-        </div>
+        </Box>
       </Grid>
     </React.Fragment>
   );

@@ -4,16 +4,16 @@ import Typography from "@mui/material/Typography";
 // import Paper from "@mui/material/Paper";
 import React from "react";
 
-const style = {
-  height: "100%",
-  width: "100%",
-  // maxWidth: "100px",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  background: `url("/assets/pumpheartai.svg") no-repeat center`,
-  backgroundSize: "contain",
-};
+// const style = {
+//   height: "100%",
+//   width: "100%",
+//   // maxWidth: "100px",
+//   display: "flex",
+//   flexDirection: "column",
+//   justifyContent: "center",
+//   background: `url("/assets/pumpheartai.svg") no-repeat center`,
+//   backgroundSize: { sx: "cover", sm: "contain" },
+// };
 
 const HomePage = () => {
   return (
@@ -21,13 +21,26 @@ const HomePage = () => {
       item
       xs={12}
       sx={{
-        margin: 0,
         display: "flex",
         justifyContent: "center",
-        padding: "3rem 1rem 0 1rem",
+        // padding: { xs: "1rem 0 0 0", sm: "3rem 1rem 0 1rem" },
+        // padding:{xs: "1rem 0 0 0"}
+        padding: { sm: "1rem 0 0 0", md: "3rem 1rem 0 1rem" },
+        // overflowY: "auto",
+        // overflowX: "hidden",
       }}
     >
-      <div style={style}>
+      <Box
+        sx={{
+          height: "100%",
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          background: `url("/assets/pumpheartai.svg") no-repeat center`,
+          backgroundSize: { xs: "cover", sm: "contain" },
+        }}
+      >
         <Box
           sx={{
             background:
@@ -50,7 +63,7 @@ const HomePage = () => {
             {/* PAULINA OKULSKA */}
           </Typography>
         </Box>
-      </div>
+      </Box>
     </Grid>
   );
 };

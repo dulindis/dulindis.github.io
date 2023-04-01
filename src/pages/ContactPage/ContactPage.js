@@ -16,20 +16,30 @@ import SocialFollow from "../../components/SocialFollow/SocialFollow";
 // }));
 
 const ContactPage = () => {
-  const style = {
-    height: "100%",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    background: `url("/assets/organicheartai.svg")  100% -5%   no-repeat`,
-    // backgroundSize: "50% auto",
-    backgroundSize: "auto 70% ",
-    // backgroundSize: { xs: "70% auto", md: "auto 70% " },
-  };
+  // const style = {
+  //   height: "100%",
+  //   display: "flex",
+  //   flexDirection: "column",
+  //   justifyContent: "center",
+  //   background: `url("/assets/organicheartai.svg")  100% -5%   no-repeat`,
+  //   // backgroundSize: "50% auto",
+  //   backgroundSize: "auto 70% ",
+  //   // backgroundSize: { xs: "70% auto", md: "auto 70% " },
+  // };
 
   return (
     <Grid item xs={12}>
-      <div style={style}>
+      <Box
+        sx={{
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          background: `url("/assets/organicheartai.svg")  100% -5%   no-repeat`,
+          backgroundSize: { xs: "auto 30%", sm: "auto 70%" },
+          // backgroundSize: "auto 70% ",
+        }}
+      >
         <Box
           sx={{
             background:
@@ -52,7 +62,7 @@ const ContactPage = () => {
             <SocialFollow />
           </Stack>
         </Box>
-      </div>
+      </Box>
     </Grid>
   );
 };

@@ -3,14 +3,14 @@ import { createTheme } from "@mui/material/styles";
 export const dashboardTheme = createTheme({
   palette: {
     primary: {
-     main: '#343434',
+      main: "#343434",
     },
-    secondary:{
-      main:"#EEECEC"
+    secondary: {
+      main: "#EEECEC",
     },
-    tertiary:{
-      main:"#EEECEC"
-    }
+    tertiary: {
+      main: "#EEECEC",
+    },
   },
 
   components: {
@@ -41,14 +41,16 @@ export const dashboardTheme = createTheme({
     //     // },
     //   },
     // },
-    // MuiGrid: {
-    //   styleOverrides:{
-    //     // root:{
-
-    //     // }
-    //   }
-
-    // },
+    MuiGrid: {
+      styleOverrides: {
+        container: {
+          padding: 0,
+        },
+        item: {
+          margin: 0,
+        },
+      },
+    },
   },
   typography: {
     fontFamily: ["Montserrat", "Sacramento"],
@@ -72,7 +74,7 @@ export const dashboardTheme = createTheme({
       letterSpacing: 2,
       fontWeight: "400",
       fontFamily: "Montserrat",
-      fontSize:"1.4rem"
+      fontSize: "1.4rem",
     },
     h5: {
       letterSpacing: 2,
@@ -85,11 +87,11 @@ export const dashboardTheme = createTheme({
       fontWeight: "400",
       fontFamily: "'Sacramento', cursive",
     },
-    subtitle1:{
+    subtitle1: {
       letterSpacing: 2,
       fontWeight: "400",
       fontFamily: "Montserrat",
-      fontSize:"1.2rem"
-    }
+      fontSize: "1.2rem",
+    },
   },
 });

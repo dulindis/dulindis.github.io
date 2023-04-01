@@ -1,7 +1,11 @@
 .App {
+  /* margin:0;
+  padding:0; */
   text-align: center;
   box-sizing: border-box;
   height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .page-wrapper {
@@ -11,6 +15,8 @@
   display: flex;
   justify-content: center;
   position: relative;
+  /* overflow-y: "auto";
+  overflow-y: "hidden"; */
 }
 
 footer {
