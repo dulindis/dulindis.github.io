@@ -38,7 +38,6 @@ const HomePage = () => {
           <Typography
             sx={{ typography: { sm: "h3", xs: "h5" } }}
             component="h2"
-            gutterBottom
           >
             "Let's put some life into your app..."
             {/* LET'S PUT SOME LIFE INTO YOUR APP.. */}

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     // <Box component="footer">
     <footer>
-      <Typography variant="h6">&copy; Paulina Okulska 2023</Typography>
+      <Typography variant="body1">&copy; Paulina Okulska 2023</Typography>
       {/* </Box> */}
     </footer>
   );

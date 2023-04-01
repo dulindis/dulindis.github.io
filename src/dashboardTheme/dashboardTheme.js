@@ -83,7 +83,13 @@ export const dashboardTheme = createTheme({
       letterSpacing: 2,
       fontWeight: "400",
       fontFamily: "Montserrat",
-      fontSize: "1.2rem",
+      fontSize: "1rem",
+    },
+    body1: {
+      fontFamily: "'Sacramento', cursive",
+    },
+    body2: {
+      fontFamily: "Montserrat",
     },
   },
 });

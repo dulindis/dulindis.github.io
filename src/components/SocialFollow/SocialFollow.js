@@ -16,8 +16,13 @@ const SocialFollow = () => {
   // flex-direction: column`;
 
   return (
-    <Stack direction={{xs:"column", md:"row"}} spacing={3} justifyContent="center" sx={{mt:{xs:1, md:3}, fontSize:{xs:"32px", md:"30px"}}}>
-    <Link
+    <Stack
+      direction={{ xs: "column", sm: "row" }}
+      spacing={{ xs: 0, sm: 3 }}
+      justifyContent="center"
+      sx={{ mt: { xs: 1, md: 3 }, fontSize: { xs: "32px", md: "30px" } }}
+    >
+      <Link
         href="#"
         onClick={(e) => {
           window.location.href = "mailto:paulinaokulska@gmail.com ";

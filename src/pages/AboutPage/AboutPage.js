@@ -49,7 +49,6 @@ const AboutPage = () => {
             <Typography
               sx={{ typography: { sm: "h2", xs: "h3" } }}
               component="h3"
-              gutterBottom
             >
               Paulina Okulska
             </Typography>
@@ -61,9 +60,10 @@ const AboutPage = () => {
             sx={{
               background:
                 "linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 15%, rgba(255,255,255,1), rgba(255,255,255,0.7) 85%, rgba(255,255,255,0)) 100%",
-              pt: 3,
+              pt: 2,
               pb: 3,
-              overflowY: "auto", overflowX: "hidden"
+              overflowY: "auto",
+              overflowX: "hidden",
             }}
           >
             <Stack
@@ -81,20 +81,23 @@ const AboutPage = () => {
                   overflowX: "hidden",
                 }}
               >
-                <Typography variant="p">
-                  Exploring secrets of React, Node and C#. Currently excited
-                  about .NET. I am eager to join an ambitious team as a junior
-                  developer where I could use my skills in coding and
-                  troubleshooting in order to contribute to interesting
-                  projects.
-                </Typography>
-                <Typography variant="p">
-                  I'm Approaching challenges with enthusiasm and curiosity. My
-                  strong communication and language skills, attenion to graphic
-                  design, efficient learning, attention to detail and
-                  solution-oriented attitude would make me a valuable asset to
-                  your team.
-                </Typography>
+                <Box sx={{ mb: 2 }}>
+                  <Typography variant="body2">
+                    Exploring secrets of React, Node and C#. Currently excited
+                    about .NET. I am eager to join an ambitious team as a junior
+                    developer, where I could use my skills in coding and
+                    troubleshooting in order to contribute to interesting
+                    projects.
+                  </Typography>
+                </Box>
+                <Box>
+                  <Typography variant="body2">
+                    I'm approaching challenges with enthusiasm and curiosity. My
+                    strong communication and language skills, attention to
+                    graphic design, efficient learning, and solution-oriented
+                    attitude will make me a valuable asset to your team.
+                  </Typography>
+                </Box>
               </Box>
             </Stack>
 
