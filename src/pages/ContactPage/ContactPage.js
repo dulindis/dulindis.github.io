@@ -1,9 +1,11 @@
-import { Box, Grid, Paper, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 import React from "react";
-import Link from "@mui/material/Link";
 import styled from "styled-components";
-import CommonButton from "../../components/Layout/CommonButton/CommonButton";
-// import { ReactComponent as OrganicHeartSVG } from "../../assets/organic-heart.svg";
+
+import SocialFollow from "../../components/SocialFollow/SocialFollow";
 
 // const Item = styled(Paper)(({ theme }) => ({
 //   //backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -19,9 +21,10 @@ const ContactPage = () => {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    background: `url("/assets/organicheartai.svg")  110% -5%   no-repeat`,
+    background: `url("/assets/organicheartai.svg")  100% -5%   no-repeat`,
     // backgroundSize: "50% auto",
     backgroundSize: "auto 70% ",
+    // backgroundSize: { xs: "70% auto", md: "auto 70% " },
   };
 
   return (
@@ -30,23 +33,24 @@ const ContactPage = () => {
         <Box
           sx={{
             background:
-              "linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.9), rgba(255,255,255,0))",
+              "linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 10%, rgba(255,255,255,1), rgba(255,255,255,0.8) 85%, rgba(255,255,255,0)) 100%",
             pt: 3,
             pb: 3,
           }}
         >
-          <Typography variant="h4" component="h1" gutterBottom>
-            Contact
-          </Typography>
-          <Typography variant="h5" component="h2" gutterBottom>
-            paulinaokulska@gmail.com
-          </Typography>
-          <Typography variant="subtitle1">
-            <Link href="https://github.com/dulindis" underline="none">
-              GITHUB
-            </Link>
-          </Typography>
-          {/* <Typography variant="subtitle1">Lorem ipsum..</Typography> */}
+          <Stack sx={{ margin: 2 }}>
+            <Typography variant="h2" component="h3" gutterBottom>
+              Contact
+            </Typography>
+            <Typography
+              sx={{ typography: { xs: "subtitle1", sm: "h4" } }}
+              component="h4"
+            >
+              If you are interested in cooperation, you can contact me here:
+            </Typography>
+
+            <SocialFollow />
+          </Stack>
         </Box>
       </div>
     </Grid>

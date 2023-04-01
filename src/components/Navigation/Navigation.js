@@ -5,7 +5,6 @@ import { HiMenu } from "react-icons/hi";
 import { mainNabarObjects } from "./consts/navbarListItems";
 
 import Drawer from "@mui/material/Drawer";
-import Toolbar from "@mui/material/Toolbar";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
@@ -59,7 +58,9 @@ const Navigation = () => {
       </List>
     </Box>
   );
-
+  {
+    /* <HiMenu />  */
+  }
   return (
     <nav>
       {["left"].map((anchor) => (
@@ -68,16 +69,16 @@ const Navigation = () => {
             onClick={toggleDrawer(anchor, !state[anchor])}
             sx={{
               position: "absolute",
-              left: state[anchor] ? "280px" : "30px",
+              left: state[anchor] ? "250px" : "0px",
               top: "50%",
               transform: "translate(0, -50%)",
               zIndex: 1000,
               transition: "ease 0.5",
-              fontSize: "30px",
-              color: "#ccc",
+              fontSize: "25px",
+              color: "primary.main",
             }}
           >
-            {state[anchor] ? <HiMenu />  :   <HiMenuAlt2 />}
+            {state[anchor] ? "" : <HiMenuAlt2 />}
           </Button>
           <Drawer
             anchor={anchor}

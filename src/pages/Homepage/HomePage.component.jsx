@@ -1,9 +1,9 @@
-import { Box, Grid, Paper, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+// import Paper from "@mui/material/Paper";
 import React from "react";
 
-// const matches = useMediaQuery((theme) => theme.breakpoints.up('sm'));
-
-// return <span>{`theme.breakpoints.up('sm'
 const style = {
   height: "100%",
   width: "100%",
@@ -24,25 +24,30 @@ const HomePage = () => {
         margin: 0,
         display: "flex",
         justifyContent: "center",
-        padding: "3rem 3rem 0 3rem",
+        padding: "3rem 1rem 0 1rem",
       }}
     >
       <div style={style}>
         <Box
           sx={{
             background:
-              "linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.9), rgba(255,255,255,0))",
+              "linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 15%, rgba(255,255,255,1), rgba(255,255,255,0.7) 85%, rgba(255,255,255,0)) 100%",
             pt: 3,
             pb: 3,
+            color: "#222",
           }}
         >
-          <Typography variant="h4" component="h1" gutterBottom>
-            Paulina Okulska
-            {/* PAULINA OKULSKA */}
+          <Typography
+            sx={{ typography: { sm: "h3", xs: "h5" } }}
+            component="h2"
+            gutterBottom
+          >
+            "Let's put some life into your app..."
+            {/* LET'S PUT SOME LIFE INTO YOUR APP.. */}
           </Typography>
-          <Typography variant="h5" component="h2" gutterBottom>
-            {/* "Let's put some life into your page..." */}
-            LETS PUT SOME LIFE INTO YOUR APP..
+          <Typography variant="h6" component="h1" gutterBottom>
+            {/* Paulina Okulska */}
+            {/* PAULINA OKULSKA */}
           </Typography>
         </Box>
       </div>
