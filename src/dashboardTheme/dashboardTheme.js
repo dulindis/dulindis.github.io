@@ -23,24 +23,16 @@ export const dashboardTheme = createTheme({
     },
     MuiDrawer: {
       styleOverrides: {
-        // paperAnchorLeft:{
-        //  backgroundColor:"#fff"
-        // }
+        root: { width: 320, zIndex: "2", flexShrink: 0 },
+        paper: {
+          width: 320,
+          boxSizing: "border-box",
+          backgroundColor: "##fff",
+          color: "primary.main",
+        },
       },
     },
-    // MuiLink: {
-    //   styleOverrides: {
-    //     // Name of the slot
-    //     // color: "ddd",
 
-    //     // root: {
-    //     //   fontSize: "1rem",
-    //     //   underline: "none",
-    //     //   color: "ddd",
-    //     //   margin: "0 1rem"
-    //     // },
-    //   },
-    // },
     MuiGrid: {
       styleOverrides: {
         container: {

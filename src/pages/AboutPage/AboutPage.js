@@ -32,8 +32,8 @@ const AboutPage = () => {
             background: `url("/assets/technical-heart.svg")  100% 0%   no-repeat`,
             backgroundSize: " auto 50%",
 
-            // overflowY: "auto",
-            // overflowX: "hidden",
+            overflowY: "auto",
+            overflowX: "hidden",
           }}
         >
           <Box
@@ -63,7 +63,7 @@ const AboutPage = () => {
                 "linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 15%, rgba(255,255,255,1), rgba(255,255,255,0.7) 85%, rgba(255,255,255,0)) 100%",
               pt: 3,
               pb: 3,
-              overflow: "hidden",
+              overflowY: "auto", overflowX: "hidden"
             }}
           >
             <Stack
@@ -108,10 +108,10 @@ const AboutPage = () => {
               }}
             >
               <SiReact />
-              {/* <SiJavascript /> */}
+              <SiJavascript />
               <FaNodeJs />
               <TbBrandCSharp />
-              <SiDotnet />
+              {/* <SiDotnet /> */}
             </Stack>
           </Box>
         </Box>

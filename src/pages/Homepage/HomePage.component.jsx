@@ -1,19 +1,7 @@
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-// import Paper from "@mui/material/Paper";
 import React from "react";
-
-// const style = {
-//   height: "100%",
-//   width: "100%",
-//   // maxWidth: "100px",
-//   display: "flex",
-//   flexDirection: "column",
-//   justifyContent: "center",
-//   background: `url("/assets/pumpheartai.svg") no-repeat center`,
-//   backgroundSize: { sx: "cover", sm: "contain" },
-// };
 
 const HomePage = () => {
   return (
@@ -23,11 +11,7 @@ const HomePage = () => {
       sx={{
         display: "flex",
         justifyContent: "center",
-        // padding: { xs: "1rem 0 0 0", sm: "3rem 1rem 0 1rem" },
-        // padding:{xs: "1rem 0 0 0"}
-        padding: { sm: "1rem 0 0 0", md: "3rem 1rem 0 1rem" },
-        // overflowY: "auto",
-        // overflowX: "hidden",
+        padding: { xs: "1rem 0 0 0", sm: "3rem 1rem 0 1rem" },
       }}
     >
       <Box
@@ -39,6 +23,7 @@ const HomePage = () => {
           justifyContent: "center",
           background: `url("/assets/pumpheartai.svg") no-repeat center`,
           backgroundSize: { xs: "cover", sm: "contain" },
+          // padding: { sm: "1rem 0 0 0", md: "3rem 1rem 0 1rem" },
         }}
       >
         <Box
