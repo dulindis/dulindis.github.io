@@ -1,5 +1,7 @@
 {
   "name": "dulindis.github.io",
+  "author": "Paulina Okulska",
+  "license": "ISC",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
