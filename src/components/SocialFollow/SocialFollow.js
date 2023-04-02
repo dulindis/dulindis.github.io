@@ -8,16 +8,14 @@ import { FiMail } from "react-icons/fi";
 // import { Link } from "react-router-dom";
 
 const SocialFollow = () => {
-  // const NavbarContainer= styled(Link)`
-  // width: 100%;
-  // height:50px;
-  // background-color: purple;
-  // display: flex;
-  // flex-direction: column`;
-
   return (
-    <Stack direction={{xs:"column", md:"row"}} spacing={3} justifyContent="center" sx={{mt:{xs:1, md:3}, fontSize:{xs:"32px", md:"30px"}}}>
-    <Link
+    <Stack
+      direction={{ xs: "column", sm: "row" }}
+      spacing={{ xs: 0, sm: 3 }}
+      justifyContent="center"
+      sx={{ mt: { xs: 1, md: 3 }, fontSize: { xs: "32px", md: "30px" } }}
+    >
+      <Link
         href="#"
         onClick={(e) => {
           window.location.href = "mailto:paulinaokulska@gmail.com ";
