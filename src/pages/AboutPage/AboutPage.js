@@ -31,7 +31,6 @@ const AboutPage = () => {
             justifyContent: "center",
             background: `url("/assets/technical-heart.svg")  100% 0%   no-repeat`,
             backgroundSize: " auto 50%",
-
             overflowY: "auto",
             overflowX: "hidden",
           }}
@@ -39,7 +38,7 @@ const AboutPage = () => {
           <Box
             sx={{
               background:
-                "linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 15%, rgba(255,255,255,1), rgba(255,255,255,0.7) 85%, rgba(255,255,255,0)) 100%",
+                "linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 10%, rgba(255,255,255,1), rgba(255,255,255,0.9) 90%, rgba(255,255,255,0)) 100%",
               pt: 3,
               pb: 3,
               overflowY: "auto",

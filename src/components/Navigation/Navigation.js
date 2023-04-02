@@ -1,23 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
+
+import { useNavigate } from "react-router-dom";
+
 import { HiMenuAlt2 } from "react-icons/hi";
-import { HiMenu } from "react-icons/hi";
 
 import { mainNabarObjects } from "./consts/navbarListItems";
+import { navbarStyles } from "./styles";
 
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import { navbarStyles } from "./styles";
-import { useNavigate, userParams, Navigate } from "react-router-dom";
-import { Box, Button } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
-//mainNabarObjects
 const Navigation = () => {
   const navigate = useNavigate();
+  const theme = useTheme();
 
   const [state, setState] = React.useState({
     left: false,
@@ -49,33 +50,33 @@ const Navigation = () => {
             disablePadding
             sx={{ py: 3 }}
           >
-            {/* <ListItemButton> */}
             <ListItemIcon sx={navbarStyles.icons}>{item.icon}</ListItemIcon>
             <ListItemText sx={navbarStyles.text} primary={item.label} />
-            {/* </ListItemButton> */}
           </ListItem>
         ))}
       </List>
     </Box>
   );
-  {
-    /* <HiMenu />  */
-  }
+
   return (
-    <nav>
+    <Box component="nav">
       {["left"].map((anchor) => (
-        <React.Fragment key={anchor}>
+        <Box key={anchor}>
           <Button
             onClick={toggleDrawer(anchor, !state[anchor])}
             sx={{
               position: "absolute",
               left: state[anchor] ? "250px" : "0px",
-              top: "50%",
+              top: { xs: "30px", sm: "50%" },
               transform: "translate(0, -50%)",
               zIndex: 1000,
               transition: "ease 0.5",
-              fontSize: "25px",
+              fontSize: "1.5rem",
               color: "primary.main",
+              backgroundColor: {
+                xs: "rgba(238, 236, 236,0.7)",
+                sm: "transparent",
+              },
             }}
           >
             {state[anchor] ? "" : <HiMenuAlt2 />}
@@ -98,9 +99,9 @@ const Navigation = () => {
           >
             {list(anchor)}
           </Drawer>
-        </React.Fragment>
+        </Box>
       ))}
-    </nav>
+    </Box>
   );
 };
 

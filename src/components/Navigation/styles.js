@@ -23,10 +23,10 @@ export const navbarStyles = {
     },
   },
   button: {
-    position: "absolute",
-    zIndex: 3,
-    bottom: "50%",
-    color: "primary.main",
-    left: 250,
+    // position: "absolute",
+    // zIndex: 3,
+    // bottom: "50%",
+    // color: "primary.main",
+    // left: 250,
   },
 };

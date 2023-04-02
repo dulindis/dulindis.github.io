@@ -1,5 +1,4 @@
 import { createTheme } from "@mui/material/styles";
-// import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
 export const dashboardTheme = createTheme({
   palette: {
     primary: {
@@ -12,13 +11,10 @@ export const dashboardTheme = createTheme({
       main: "#EEECEC",
     },
   },
-
   components: {
-    // Name of the component
     MuiButtonBase: {
       defaultProps: {
-        // The props to change the default for.
-        disableRipple: true, // No more ripple, on the whole application 💣!
+        disableRipple: true,
       },
     },
     MuiDrawer: {
@@ -32,7 +28,6 @@ export const dashboardTheme = createTheme({
         },
       },
     },
-
     MuiGrid: {
       styleOverrides: {
         container: {
@@ -54,7 +49,6 @@ export const dashboardTheme = createTheme({
     h2: {
       letterSpacing: 2,
       fontWeight: "400",
-      // fontFamily:"Montserrat"
       fontFamily: "'Sacramento', cursive",
     },
     h3: {

@@ -8,13 +8,6 @@ import { FiMail } from "react-icons/fi";
 // import { Link } from "react-router-dom";
 
 const SocialFollow = () => {
-  // const NavbarContainer= styled(Link)`
-  // width: 100%;
-  // height:50px;
-  // background-color: purple;
-  // display: flex;
-  // flex-direction: column`;
-
   return (
     <Stack
       direction={{ xs: "column", sm: "row" }}
