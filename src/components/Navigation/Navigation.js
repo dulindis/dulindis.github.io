@@ -69,7 +69,7 @@ const Navigation = () => {
               left: state[anchor] ? "250px" : "0px",
               top: { xs: "30px", sm: "50%" },
               transform: "translate(0, -50%)",
-              zIndex: 1000,
+              zIndex: 2,
               transition: "ease 0.5",
               fontSize: "1.5rem",
               color: "primary.main",
