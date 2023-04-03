@@ -1,54 +1,21 @@
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import React from "react";
+import { StyledContentBox, StyledBox, StyledGrid } from "./styles";
 
 const HomePage = () => {
   return (
-    <Grid
-      item
-      xs={12}
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        padding: { xs: "1rem 0 0 0", sm: "3rem 1rem 0 1rem" },
-      }}
-    >
-      <Box
-        sx={{
-          height: "100%",
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          background: `url("/assets/pumpheartai.svg") no-repeat center`,
-          backgroundSize: { xs: "cover", sm: "contain" },
-          // padding: { sm: "1rem 0 0 0", md: "3rem 1rem 0 1rem" },
-        }}
-      >
-        <Box
-          sx={{
-            background:
-              "linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 10%, rgba(255,255,255,1), rgba(255,255,255,0.9) 90%, rgba(255,255,255,0)) 100%",
-            pt: 3,
-            pb: 3,
-            color: "#222",
-          }}
-        >
+    <StyledGrid item xs={12}>
+      <StyledBox>
+        <StyledContentBox>
           <Typography
-            sx={{ typography: { sm: "h3", xs: "h5" } }}
+            sx={{ typography: { sm: "h3", xs: "h5" }, padding: 2 }}
             component="h2"
           >
             "Let's put some life into your app..."
-            {/* LET'S PUT SOME LIFE INTO YOUR APP.. */}
           </Typography>
-          <Typography variant="h6" component="h1" gutterBottom>
-            {/* Paulina Okulska */}
-            {/* PAULINA OKULSKA */}
-          </Typography>
-        </Box>
-      </Box>
-    </Grid>
+        </StyledContentBox>
+      </StyledBox>
+    </StyledGrid>
   );
 };
 

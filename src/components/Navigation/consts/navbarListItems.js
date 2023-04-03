@@ -4,7 +4,7 @@ import { HiOutlineCode } from "react-icons/hi";
 import { BiHomeAlt2 } from "react-icons/bi";
 
 export const mainNabarObjects = [
-    {
+  {
     id: 0,
     icon: <BiHomeAlt2 />,
     label: "Home",
@@ -13,7 +13,7 @@ export const mainNabarObjects = [
   {
     id: 1,
     icon: <GiPerson />,
-    label: "About Me",
+    label: "About",
     route: "about",
   },
   {
@@ -28,5 +28,4 @@ export const mainNabarObjects = [
     label: "Contact",
     route: "contact",
   },
-
 ];

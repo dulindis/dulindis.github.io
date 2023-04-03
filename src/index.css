@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; */
 }
 
 code {
@@ -19,16 +23,15 @@ code {
 ::-webkit-scrollbar {
   width: 0.75em;
   height: 0.75em;
-
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #EEECEC;
+  background-color: #eeecec;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #343434;
-  border: 0.35em solid #EEECEC;
+  border: 0.35em solid #eeecec;
   border-radius: 100vw;
 }
 

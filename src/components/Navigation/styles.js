@@ -1,32 +1,48 @@
-export const navbarStyles = {
-  // drawer: {
-  //   width: 320,
-  //   zIndex: "2",
-  //   flexShrink: 0,
-  //   "& .MuiDrawer-paper": {
-  //     width: 320,
-  //     boxSizing: "border-box",
-  //     backgroundColor: "##fff",
-  //     color: "primary.main",
-  //   },
-  //   "& .Mui-selected": {
-  //     color: "red",
-  //   },
-  // },
-  icons: {
-    color: "primary.main",
-    marginLeft: "25px",
+import { styled } from "@mui/material";
+import Button from "@mui/material/Button";
+import Drawer from "@mui/material/Drawer";
+import ListItemIcon from "@mui/material/ListItemIcon";
+
+export const StyledButton = styled(Button)(({ theme, state, anchor }) => ({
+  position: "absolute",
+  left: state[anchor] ? "250px" : "0px",
+  top: "50%",
+  [theme.breakpoints.only("xs")]: {
+    top: "30px",
   },
-  text: {
-    "& span": {
-      fontSize: "36px",
-    },
+  transform: "translate(0, -50%)",
+  zIndex: 2,
+  transition: "ease 0.5",
+  fontSize: "1.5rem",
+  color: "primary.main",
+  backgroundColor: "transparent",
+  [theme.breakpoints.only("xs")]: {
+    backgroundColor: "rgba(238, 236, 236,0.7)",
   },
-  button: {
-    // position: "absolute",
-    // zIndex: 3,
-    // bottom: "50%",
-    // color: "primary.main",
-    // left: 250,
+}));
+
+export const StyledDrawer = styled(Drawer)(({ theme }) => ({
+  ".MuiDrawer-root": {
+    width: "270px",
+    zIndex: "2",
+    flexShrink: 0,
   },
-};
+  ".MuiDrawer-paper": {
+    display: "flex",
+    flexDirection: "column",
+    alignContent: "center",
+    justifyContent: "center",
+    width: "270px",
+    boxSizing: "border-box",
+    backgroundColor: "#fff",
+    color: "#343434",
+  },
+}));
+
+export const StyledListItemIcon = styled(ListItemIcon)(({ theme }) => ({
+  color: "primary.main",
+  marginLeft: "50px",
+  [theme.breakpoints.only("xs")]: {
+    backgroundColor: "35px",
+  },
+}));

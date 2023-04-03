@@ -1,72 +1,18 @@
 import { createTheme } from "@mui/material/styles";
 
-const dashboardTheme = createTheme({
+export const theme = createTheme({
   palette: {
     primary: {
-      main: "rgba(52, 52, 52, 1)",
+      main: "#343434",
     },
     secondary: {
-      main: "rgba(238, 236, 236, 1)",
-    },
-    tertiary: {
-      main: "rgba(238, 236, 236, 1)",
-    },
-  },
-  typography: {
-    fontFamily: "Montserrat, sans-serif",
-    h1: {
-      letterSpacing: 6,
-      fontWeight: "700",
-      fontFamily: "Sacramento, cursive",
-    },
-    h2: {
-      letterSpacing: 2,
-      fontWeight: "400",
-    },
-    h3: {
-      letterSpacing: 2,
-      fontWeight: "400",
-    },
-    h4: {
-      letterSpacing: 2,
-      fontWeight: "400",
-      fontSize: "1.4rem",
-    },
-    h5: {
-      letterSpacing: 2,
-      fontWeight: "400",
-    },
-    h6: {
-      letterSpacing: 2,
-      fontWeight: "400",
-    },
-    subtitle1: {
-      letterSpacing: 2,
-      fontWeight: "400",
-      fontSize: "1rem",
-    },
-    body1: {
-      fontFamily: "Sacramento, cursive",
-    },
-    body2: {
-      fontFamily: "Montserrat, sans-serif",
+      main: "#EEECEC",
     },
   },
   components: {
     MuiButtonBase: {
       defaultProps: {
         disableRipple: true,
-      },
-    },
-    MuiDrawer: {
-      styleOverrides: {
-        root: { width: 320, zIndex: "2", flexShrink: 0 },
-        paper: {
-          width: 320,
-          boxSizing: "border-box",
-          backgroundColor: "#fff",
-          color: "primary.main",
-        },
       },
     },
     MuiGrid: {
@@ -78,6 +24,37 @@ const dashboardTheme = createTheme({
           margin: 0,
         },
       },
+    },
+  },
+  typography: {
+    fontFamily: ["Montserrat"],
+    h3: {
+      letterSpacing: 2,
+      fontWeight: "400",
+      fontFamily: "'Sacramento', cursive",
+    },
+    h4: {
+      letterSpacing: 2,
+      fontSize: "1.4rem",
+    },
+    h5: {
+      letterSpacing: 2,
+      fontWeight: "400",
+      fontFamily: "'Sacramento', cursive",
+      fontSize: "1.7rem",
+    },
+    h6: {
+      letterSpacing: 2,
+      fontWeight: "400",
+      fontFamily: "'Sacramento', cursive",
+    },
+    subtitle1: {
+      letterSpacing: 2,
+      fontWeight: "500",
+      fontSize: "1rem",
+    },
+    body2: {
+      fontFamily: "Montserrat",
     },
   },
 });

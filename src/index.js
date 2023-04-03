@@ -8,14 +8,14 @@ import AboutPage from "./pages/AboutPage/AboutPage";
 import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import { ThemeProvider } from "@mui/material/styles";
-import { dashboardTheme } from "./dashboardTheme/dashboardTheme";
+import { theme } from "./dashboardTheme/dashboardTheme";
 import HomePage from "./pages/Homepage/HomePage.component";
 import NotFound from "./pages/NotFound/NotFound";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={dashboardTheme}>
+    <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />}>
