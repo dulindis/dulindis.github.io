@@ -1,14 +1,55 @@
 import { createTheme } from "@mui/material/styles";
-export const dashboardTheme = createTheme({
+
+const dashboardTheme = createTheme({
   palette: {
     primary: {
-      main: "#343434",
+      main: "rgba(52, 52, 52, 1)",
     },
     secondary: {
-      main: "#EEECEC",
+      main: "rgba(238, 236, 236, 1)",
     },
     tertiary: {
-      main: "#EEECEC",
+      main: "rgba(238, 236, 236, 1)",
+    },
+  },
+  typography: {
+    fontFamily: "Montserrat, sans-serif",
+    h1: {
+      letterSpacing: 6,
+      fontWeight: "700",
+      fontFamily: "Sacramento, cursive",
+    },
+    h2: {
+      letterSpacing: 2,
+      fontWeight: "400",
+    },
+    h3: {
+      letterSpacing: 2,
+      fontWeight: "400",
+    },
+    h4: {
+      letterSpacing: 2,
+      fontWeight: "400",
+      fontSize: "1.4rem",
+    },
+    h5: {
+      letterSpacing: 2,
+      fontWeight: "400",
+    },
+    h6: {
+      letterSpacing: 2,
+      fontWeight: "400",
+    },
+    subtitle1: {
+      letterSpacing: 2,
+      fontWeight: "400",
+      fontSize: "1rem",
+    },
+    body1: {
+      fontFamily: "Sacramento, cursive",
+    },
+    body2: {
+      fontFamily: "Montserrat, sans-serif",
     },
   },
   components: {
@@ -23,7 +64,7 @@ export const dashboardTheme = createTheme({
         paper: {
           width: 320,
           boxSizing: "border-box",
-          backgroundColor: "##fff",
+          backgroundColor: "#fff",
           color: "primary.main",
         },
       },
@@ -37,53 +78,6 @@ export const dashboardTheme = createTheme({
           margin: 0,
         },
       },
-    },
-  },
-  typography: {
-    fontFamily: ["Montserrat", "Sacramento"],
-    h1: {
-      letterSpacing: 6,
-      fontWeight: "700",
-      fontFamily: "'Sacramento', cursive",
-    },
-    h2: {
-      letterSpacing: 2,
-      fontWeight: "400",
-      fontFamily: "'Sacramento', cursive",
-    },
-    h3: {
-      letterSpacing: 2,
-      fontWeight: "400",
-      fontFamily: "'Sacramento', cursive",
-    },
-    h4: {
-      letterSpacing: 2,
-      fontWeight: "400",
-      fontFamily: "Montserrat",
-      fontSize: "1.4rem",
-    },
-    h5: {
-      letterSpacing: 2,
-      fontWeight: "400",
-      fontFamily: "'Sacramento', cursive",
-    },
-
-    h6: {
-      letterSpacing: 2,
-      fontWeight: "400",
-      fontFamily: "'Sacramento', cursive",
-    },
-    subtitle1: {
-      letterSpacing: 2,
-      fontWeight: "400",
-      fontFamily: "Montserrat",
-      fontSize: "1rem",
-    },
-    body1: {
-      fontFamily: "'Sacramento', cursive",
-    },
-    body2: {
-      fontFamily: "Montserrat",
     },
   },
 });
