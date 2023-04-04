@@ -16,7 +16,7 @@ const ContactPage = () => {
               Contact
             </Typography>
             <Typography
-              sx={{ typography: { xs: "body2", sm: "subtitle1" }, pb: 2 }}
+              sx={{ typography: { xs: "body2", sm: "subtitle1" }, p: "2" }}
               component="h2"
             >
               Interested in cooperation? Contact me here:
