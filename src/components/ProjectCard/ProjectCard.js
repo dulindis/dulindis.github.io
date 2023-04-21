@@ -7,8 +7,32 @@ import CardMedia from "@mui/material/CardMedia";
 import Chip from "@mui/material/Chip";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: "800px",
+  bgcolor: "#ccc",
+  border: "none",
+  boxShadow: 25,
+  pt: 4,
+  px: 4,
+  pb: 2,
+};
 
 const ProjectCard = ({ project }) => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <Card sx={{ maxWidth: 345 }} id={project.id}>
       <CardContent>
@@ -35,23 +59,53 @@ const ProjectCard = ({ project }) => {
       <CardMedia
         component="img"
         height="194"
-        image={project.projectImg}
+        image={project.projectImgs[0]}
         alt={project.title}
+        onClick={handleOpen}
       />
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="child-modal-title"
+        aria-describedby="child-modal-description"
+      >
+        <Box sx={{ ...style, width: 800 }}>
+          <CardMedia
+            component="img"
+            image={project.projectImgs[0]}
+            alt={project.title}
+            onClick={handleOpen}
+          />{" "}
+          <Button onClick={handleClose}>back to projects</Button>
+        </Box>
+      </Modal>
       <CardActions>
-        <Button
-          size="small"
-          href={project.demoUrl}
-          sx={{ typography: "subtitle1" }}
-        >
-          See demo
-        </Button>
+        {project.pageUrl ? (
+          <Button
+            size="small"
+            href={project.pageUrl}
+            sx={{ typography: "subtitle1" }}
+          >
+            see page
+          </Button>
+        ) : project.demoUrl ? (
+          <Button
+            size="small"
+            href={project.demoUrl}
+            sx={{ typography: "subtitle1" }}
+          >
+            See demo
+          </Button>
+        ) : (
+          ""
+        )}
+
         <Button
           size="small"
           href={project.repoUrl}
           sx={{ typography: "subtitle1" }}
         >
-          See code
+          visit repo
         </Button>
       </CardActions>
     </Card>
