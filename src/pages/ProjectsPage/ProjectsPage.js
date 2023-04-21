@@ -21,7 +21,7 @@ const ProjectsPage = () => {
 
         <Grid
           container
-          rowSpacing={1}
+          rowSpacing={{ xs: 4, sm: 2, md: 1 }}
           columnSpacing={{ xs: 1, sm: 2, md: 3 }}
           justifyContent="center"
           justifyItems="space-around"
