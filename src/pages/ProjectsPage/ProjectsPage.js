@@ -16,11 +16,10 @@ const ProjectsPage = () => {
           component="div"
           sx={{ typography: { sm: "h3", xs: "h5" }, mb: 3 }}
         >
-          {/* Projects */}
-          Work in progress...
+          Recent Projects
         </Typography>
 
-        {/* <Grid
+        <Grid
           container
           rowSpacing={1}
           columnSpacing={{ xs: 1, sm: 2, md: 3 }}
@@ -32,7 +31,7 @@ const ProjectsPage = () => {
               <ProjectCard project={project} />{" "}
             </Grid>
           ))}
-        </Grid> */}
+        </Grid>
       </Stack>
     </Grid>
   );

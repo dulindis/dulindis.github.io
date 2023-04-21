@@ -66,7 +66,11 @@ export const projects = [
     title: "DULIN DIS ART",
     description:
       "Artistic portfolio, React as client, NodeJS and Express on the backend. Firebase as a database.",
-    projectImg: "",
+    projectImgs: [
+      "https://i.imgur.com/UgX6zLv.gif",
+      "https://i.imgur.com/KruWL8X.jpg",
+    ],
+    pageUrl: "https://dulindis.onrender.com/",
     demoUrl: "",
     repoUrl: "https://github.com/dulindis/Dulin-Dis-Art-Portfolio-Website",
     tags: [tagJS, tagReact, tagNodeJS, tagExpress, tagFirebase],
@@ -76,7 +80,7 @@ export const projects = [
     title: "KEBABOMB",
     description:
       "E-commerce web application. React wih MUI,  Node wih Express, MongoDB as a database. Stripe and Paypal payments.",
-    projectImg: "",
+    projectImgs: ["https://i.imgur.com/95Ux23Z.gif"],
     demoUrl: "",
     repoUrl: "https://github.com/dulindis/Kebab-Page",
     tags: [
@@ -93,7 +97,7 @@ export const projects = [
     id: 2,
     title: "BANK APP",
     description: "Console application in C# with database setup in RavenDB.",
-    projectImg: "",
+    projectImgs: ["https://i.imgur.com/7ivqClw.gif"],
     demoUrl: "",
     repoUrl: "https://github.com/dulindis/Bank-Application",
     tags: [tagCSharp, tagRavenDB],
